@@ -7,14 +7,25 @@ def constructMinHeightBst(array, bst, startIdx, endIdx):
 	# base case
 	if endIdx < startIdx:
 		return
+
+    # calculate middle index and value
 	midIdx = (startIdx + endIdx) // 2
 	valueToAdd = array[midIdx]
+
+    # check if bst is None
 	if bst is None:
+
+        # establish root node if so
 		bst = BST(valueToAdd)
 	else:
+
+        # otherwise add value to existing bst 
 		bst.insert(valueToAdd)
+
+    # recursively call constructMinHeightBst with updated start and stop indices
 	constructMinHeightBst(array, bst, startIdx, midIdx - 1)
 	constructMinHeightBst(array, bst, midIdx + 1, endIdx)
+    
 	return bst
 
 class BST:
