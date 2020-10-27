@@ -23,7 +23,7 @@ class Solution:
                     groupedList.append([str])
                 else:
 
-                    # O(g) -> g is number of lists in groupedList
+                    # O(g) -> g is number of lists in groupedList, which converges on n in worst case
                     for group in groupedList:
                         t = {}
 
