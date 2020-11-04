@@ -7,7 +7,7 @@ class Node:
     def addChild(self, name):
         self.children.append(Node(name))
         return self
-
+    
     def depthFirstSearch(self, array):
         array.append(self.name)
 		for child in self.children:
