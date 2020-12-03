@@ -1,3 +1,4 @@
+# Time O(nlog(n)) | Space O(n)
 def mergeSort(array):
     if len(array) == 1:
         return array
